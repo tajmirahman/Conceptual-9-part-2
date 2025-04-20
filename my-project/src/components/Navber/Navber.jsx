@@ -8,7 +8,7 @@ const Navber = () => {
         <div className="min-h-20 bg-blue-900 flex justify-between items-center text-white">
 
             <div>
-                <h1>TEETH WIZARD</h1>
+                <h1 className="text-xl font-extrabold ml-4">TEETH WIZARD</h1>
             </div>
 
             <div className="space-x-4">
@@ -18,7 +18,7 @@ const Navber = () => {
                 <NavLink to={'/profile'}>Profile</NavLink>
             </div>
 
-            <div>
+            <div className="mr-4">
                 <button className="btn btn-primary">Login</button>
             </div>
             
