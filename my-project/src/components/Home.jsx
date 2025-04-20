@@ -6,7 +6,7 @@ import Service from './Service';
 const Home = () => {
 
     const services=useLoaderData();
-    console.log(services);
+    const {serviceData,feedbackData}=services
 
     return (
         <div>
@@ -14,7 +14,7 @@ const Home = () => {
 
             <div className='grid grid-col-1 lg:grid-cols-3 md:grid-cols-2 gap-3 w-[80%] mx-auto max-w-[1200px] mt-8'>
                 {
-                    services.slice(0,5).map(service=> <Service service={service}></Service>)
+                    serviceData.slice(0,5).map(service=> <Service service={service}></Service>)
                 }
             </div>
 
