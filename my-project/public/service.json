@@ -3,14 +3,14 @@
       "id": 1,
       "treatment": "Root Canal",
       "image": "https://i.ibb.co.com/8Lf1yNyy/images-7.jpg",
-      "description": "A procedure to treat infection at the center of a tooth.",
+      "description": "Root canal treatment is used to repair and save a tooth that is badly decayed or infected. The procedure involves removing the damaged pulp, cleaning the inside of the tooth, and sealing it. It prevents further infection and can relieve severe toothache. A crown is often placed afterward to protect the tooth. Root canals are commonly performed and have a high success rate. Modern techniques and local anesthesia make the process relatively painless. Recovery is usually quick, with most patients resuming normal activities within a day or two of the procedure.",
       "cost": 350
     },
     {
       "id": 2,
       "treatment": "Teeth Whitening",
       "image": "https://i.ibb.co.com/F4pfvcNy/images-6.jpg",
-      "description": "Cosmetic treatment to lighten discolored teeth.",
+      "description": "Teeth whitening is a cosmetic dental treatment that removes stains and discoloration, resulting in a brighter smile. It can be done in-office or with take-home kits prescribed by a dentist. Common whitening agents include hydrogen peroxide and carbamide peroxide. The procedure is safe when done under professional supervision. Whitening is especially effective for stains caused by coffee, tea, tobacco, or aging. The results can last several months, depending on diet and oral hygiene. Sensitivity may occur but usually subsides quickly. Whitening enhances confidence and is popular before special occasions like weddings or professional events.",
       "cost": 120
     },
     {
@@ -24,49 +24,49 @@
       "id": 4,
       "treatment": "Tooth Extraction",
       "image": "https://i.ibb.co.com/k6vQqT0H/images-4.jpg",
-      "description": "Removal of a tooth due to decay or damage.",
+      "description": "Dental implants are artificial roots used to support replacement teeth. They are a long-term solution for missing teeth and are surgically inserted into the jawbone. Once the implant fuses with the bone, a crown is placed on top. Implants look and function like natural teeth and help maintain bone structure. They are durable and can last many years with proper care. Implants also improve chewing ability and prevent neighboring teeth from shifting. Although more expensive than other options, they offer excellent aesthetics and function. The procedure may require multiple visits and healing time.",
       "cost": 75
     },
     {
       "id": 5,
       "treatment": "Dental Cleaning",
       "image": "https://i.ibb.co.com/QvqYh8T0/images-3.jpg",
-      "description": "Routine cleaning to remove plaque and tartar.",
+      "description": "Dental cleaning is a preventive procedure that removes plaque, tartar, and stains from teeth. It helps prevent gum disease, cavities, and bad breath. A dental hygienist uses special tools to clean above and below the gumline. Cleanings are usually recommended every six months. The process is painless and typically takes about 30–60 minutes. Fluoride treatment may follow to strengthen enamel. Regular cleanings are essential for maintaining oral health and identifying early signs of dental issues. They also leave your mouth feeling fresh and clean, contributing to a healthier smile and overall well-being.",
       "cost": 60
     },
     {
       "id": 6,
       "treatment": "Braces",
       "image": "https://i.ibb.co.com/tT9b7LJY/images-2.jpg",
-      "description": "Orthodontic treatment to align and straighten teeth.",
+      "description": "Braces are orthodontic devices used to straighten and align teeth, correct bite issues, and improve dental function. They consist of brackets, wires, and rubber bands that apply continuous pressure to move teeth into the desired position. Treatment typically lasts 1–3 years, depending on the complexity of the case. Regular adjustments are needed to guide progress. Braces can be metal, ceramic, or even lingual (behind the teeth). While some discomfort is normal, the results are long-lasting and greatly improve both appearance and oral health. Proper care is essential during treatment to avoid cavities and stains.",
       "cost": 2500
     },
     {
       "id": 7,
       "treatment": "Invisalign",
       "image": "https://i.ibb.co.com/GQyVDPcF/download-2.jpg",
-      "description": "Clear aligners used as an alternative to metal braces.",
+      "description": "Invisalign is a modern orthodontic treatment using clear, removable aligners to straighten teeth discreetly. It’s popular among adults and teens who want an alternative to traditional braces. The aligners are custom-made and changed every one to two weeks as teeth gradually shift. Invisalign is comfortable and convenient, allowing patients to eat and brush normally. It treats mild to moderate alignment issues, including crowding and spacing. Compliance is key—aligners must be worn 20–22 hours a day for best results. The treatment duration varies but usually ranges from 6 to 18 months. It’s nearly invisible and highly effective.",
       "cost": 3000
     },
     {
       "id": 8,
       "treatment": "Dental Crown",
       "image": "https://i.ibb.co.com/sppYJB4W/images-1.jpg",
-      "description": "Cap placed over a damaged tooth to restore shape and strength.",
+      "description": "A dental crown is a cap placed over a damaged or decayed tooth to restore its shape, size, strength, and appearance. Crowns are often used after root canals, large fillings, or broken teeth. They can be made from porcelain, metal, resin, or ceramic. The procedure involves reshaping the tooth, taking impressions, and placing a temporary crown. Once the permanent crown is ready, it’s cemented into place. Crowns are durable and can last many years with good care. They improve both function and aesthetics, making them a popular solution for protecting and enhancing teeth.",
       "cost": 800
     },
     {
       "id": 9,
       "treatment": "Veneers",
       "image": "https://i.ibb.co.com/35k2pFLb/images.jpg",
-      "description": "Thin shells placed over teeth to improve appearance.",
+      "description": "Veneers are thin shells made of porcelain or composite resin that cover the front surface of teeth. They are used to improve the appearance of stained, chipped, misaligned, or worn-down teeth. Veneers are custom-made and bonded to the teeth, providing a natural and attractive look. The procedure usually requires minimal enamel removal and can be completed in a couple of visits. Veneers are stain-resistant and durable with proper care. They are a popular cosmetic option for creating a symmetrical and bright smile. However, they are irreversible and should be chosen carefully with professional advice.",
       "cost": 1100
     },
     {
       "id": 10,
       "treatment": "Gum Surgery",
       "image": "https://i.ibb.co.com/2YyCSWct/download-1.jpg",
-      "description": "Procedure to treat gum disease or improve gum appearance.",
+      "description": "Gum surgery, or periodontal surgery, is performed to treat advanced gum disease or reshape the gumline for aesthetic or health reasons. Common procedures include flap surgery, grafting, and contouring. The goal is to remove infected tissue, reduce pockets between the teeth and gums, and promote healing. Surgery is usually done under local anesthesia, and recovery involves careful oral hygiene and follow-up care. Gum surgery can prevent tooth loss and improve oral health. It may also enhance the appearance of the smile by correcting excessive or uneven gums. Results are long-lasting with good dental care habits.",
       "cost": 900
     }
   ]
