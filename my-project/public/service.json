@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "treatment": "Root Canal",
+      "image": "https://i.ibb.co.com/8Lf1yNyy/images-7.jpg",
+      "description": "A procedure to treat infection at the center of a tooth.",
+      "cost": 350
+    },
+    {
+      "id": 2,
+      "treatment": "Teeth Whitening",
+      "image": "https://i.ibb.co.com/F4pfvcNy/images-6.jpg",
+      "description": "Cosmetic treatment to lighten discolored teeth.",
+      "cost": 120
+    },
+    {
+      "id": 3,
+      "treatment": "Dental Implants",
+      "image": "https://i.ibb.co.com/HfNqNsFN/images-5.jpg",
+      "description": "Surgical fixtures placed into the jawbone to replace missing teeth.",
+      "cost": 2000
+    },
+    {
+      "id": 4,
+      "treatment": "Tooth Extraction",
+      "image": "https://i.ibb.co.com/k6vQqT0H/images-4.jpg",
+      "description": "Removal of a tooth due to decay or damage.",
+      "cost": 75
+    },
+    {
+      "id": 5,
+      "treatment": "Dental Cleaning",
+      "image": "https://i.ibb.co.com/QvqYh8T0/images-3.jpg",
+      "description": "Routine cleaning to remove plaque and tartar.",
+      "cost": 60
+    },
+    {
+      "id": 6,
+      "treatment": "Braces",
+      "image": "https://i.ibb.co.com/tT9b7LJY/images-2.jpg",
+      "description": "Orthodontic treatment to align and straighten teeth.",
+      "cost": 2500
+    },
+    {
+      "id": 7,
+      "treatment": "Invisalign",
+      "image": "https://i.ibb.co.com/GQyVDPcF/download-2.jpg",
+      "description": "Clear aligners used as an alternative to metal braces.",
+      "cost": 3000
+    },
+    {
+      "id": 8,
+      "treatment": "Dental Crown",
+      "image": "https://i.ibb.co.com/sppYJB4W/images-1.jpg",
+      "description": "Cap placed over a damaged tooth to restore shape and strength.",
+      "cost": 800
+    },
+    {
+      "id": 9,
+      "treatment": "Veneers",
+      "image": "https://i.ibb.co.com/35k2pFLb/images.jpg",
+      "description": "Thin shells placed over teeth to improve appearance.",
+      "cost": 1100
+    },
+    {
+      "id": 10,
+      "treatment": "Gum Surgery",
+      "image": "https://i.ibb.co.com/2YyCSWct/download-1.jpg",
+      "description": "Procedure to treat gum disease or improve gum appearance.",
+      "cost": 900
+    }
+  ]
+  
