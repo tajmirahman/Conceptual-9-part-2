@@ -1,0 +1,47 @@
+[
+    {
+      "name": "Emma Johnson",
+      "review": "Absolutely loved the service! The staff was professional and friendly. Highly recommend to anyone.",
+      "reviewId": "rev101",
+      "userImg": "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      "name": "Liam Brown",
+      "review": "Quick and painless experience. The doctor explained everything clearly. Will be returning!",
+      "reviewId": "rev102",
+      "userImg": "https://randomuser.me/api/portraits/men/32.jpg"
+    },
+    {
+      "name": "Olivia Davis",
+      "review": "A truly welcoming environment. My teeth have never felt better after a cleaning!",
+      "reviewId": "rev103",
+      "userImg": "https://randomuser.me/api/portraits/women/12.jpg"
+    },
+    {
+      "name": "Noah Miller",
+      "review": "Great attention to detail and very clean facilities. Very satisfied with my treatment.",
+      "reviewId": "rev104",
+      "userImg": "https://randomuser.me/api/portraits/men/53.jpg"
+    },
+    {
+      "name": "Ava Martinez",
+      "review": "Staff was courteous and knowledgeable. The whole process was smooth and stress-free.",
+      "reviewId": "rev105",
+      "userImg": "https://randomuser.me/api/portraits/women/18.jpg"
+    },
+    {
+      "name": "William Garcia",
+      "review": "Felt a bit nervous going in, but they made me feel so comfortable. Great results too!",
+      "reviewId": "rev106",
+      "userImg": "https://randomuser.me/api/portraits/men/25.jpg"
+    },
+    {
+      "name": "Sophia Rodriguez",
+      "review": "Very organized and professional team. Appointment started right on time. Highly appreciated.",
+      "reviewId": "rev107",
+      "userImg": "https://randomuser.me/api/portraits/women/29.jpg"
+    }
+
+]
+    
+  
