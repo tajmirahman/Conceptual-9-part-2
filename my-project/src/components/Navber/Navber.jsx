@@ -1,15 +1,17 @@
 import { NavLink } from "react-router-dom";
 
+import './Navber.css';
+
 
 const Navber = () => {
     return (
-        <div className="min-h-20 bg-red-500">
+        <div className="min-h-20 bg-blue-900 flex justify-between items-center text-white">
 
             <div>
                 <h1>TEETH WIZARD</h1>
             </div>
 
-            <div>
+            <div className="space-x-4">
                 <NavLink to={'/'}>Home</NavLink>
                 <NavLink to={'/allTreatmens'}>All Treatments</NavLink>
                 <NavLink to={'/allApointments'}>All Apoinments</NavLink>
