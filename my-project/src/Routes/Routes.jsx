@@ -18,7 +18,8 @@ const router=createBrowserRouter([
             },
             {
                 path:'/allTreatmens',
-                element:<AllTreatments />
+                element:<AllTreatments />,
+                loader: ()=>fetch('/service.json')
             },
             {
                 path:'/allApointments',
