@@ -19,7 +19,7 @@ const Home = () => {
                 }
             </div>
 
-            <NavLink to={'/allTreatmens'}><button className='btn btn-primary mx-auto block'>Show More</button></NavLink>
+            <NavLink to={'/allTreatmens'}><button className='btn btn-primary mx-auto block my-6'>Show More</button></NavLink>
 
             <FeedBack feedbackData={feedbackData}></FeedBack>
 
