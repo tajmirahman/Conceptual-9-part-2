@@ -1,5 +1,5 @@
 import React from 'react';
-import { data } from 'react-router-dom';
+
 
 const FeedBackCard = ({ feedback }) => {
 
@@ -10,7 +10,7 @@ const FeedBackCard = ({ feedback }) => {
             <div className="card-body">
                 <div className='flex justify-between items-center gap-3'>
                     <img className='w-10 h-10 rounded-full' src={userImg} alt="" />
-                    <h2 title={name} className="card-title">{name.slice(0,4)}</h2>
+                    <h2 title={name} className="card-title">{name.slice(0, 4)}</h2>
                     <p>{new Date().toLocaleDateString()}</p>
                 </div>
                 <p>{review}</p>
