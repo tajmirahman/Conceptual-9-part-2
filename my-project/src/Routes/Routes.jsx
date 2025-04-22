@@ -5,6 +5,7 @@ import AllTreatments from "../components/AllTreatments/AllTreatments";
 import AllApointments from "../components/AllApointments/AllApointments";
 import Profile from "../components/Profile/Profile";
 import Details from "../components/Details";
+import SignUp from "../components/SignUp";
 
 
 
@@ -50,6 +51,10 @@ const router=createBrowserRouter([
                     
                     return singleData;
                 }
+            },
+            {
+                path:'/signup',
+                element:<SignUp />
             }
             
 
