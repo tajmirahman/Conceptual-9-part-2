@@ -1,8 +1,10 @@
-import React from 'react';
+
 import { NavLink } from 'react-router-dom';
+
 
 const Service = ({service}) => {
 
+   
     const {cost,description,image,treatment,id}=service;
 
     return (

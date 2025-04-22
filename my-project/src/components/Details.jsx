@@ -1,16 +1,20 @@
 
-import React, { useContext } from 'react';
+
 import { useLoaderData } from 'react-router-dom';
 import Modal from './Modal';
-import { AuthContext } from './AuthProvider/AuthProvider';
+import { useContext } from 'react';
+import { authContext } from './AuthProvider/AuthProvider';
+
 
 
 const Details = () => {
 
-    const name=useContext(AuthContext);
-    console.log(name);
+    const data = useContext(authContext);
+    console.log(data);
 
-    const { image, description,treatment } = useLoaderData();
+
+
+    const { image, description, treatment } = useLoaderData();
 
 
     return (
@@ -28,7 +32,7 @@ const Details = () => {
                     <p className="mb-5 text-center">
                         {description}
                     </p>
-                    <button onClick = {()=> document.getElementById('my_modal_5').showModal()} className="btn btn-primary">Book Appointment</button>
+                    <button onClick={() => document.getElementById('my_modal_5').showModal()} className="btn btn-primary">Book Appointment</button>
                 </div>
             </div>
 
@@ -37,7 +41,7 @@ const Details = () => {
 
         </div>
 
-        
+
     );
 };
 
