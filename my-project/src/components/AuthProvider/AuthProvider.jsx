@@ -9,9 +9,10 @@ const AuthProvider = ({ children }) => {
 
     const provider = new GoogleAuthProvider();
 
-    const handleSignup=(email,passwrod)=>{
-       return createUserWithEmailAndPassword(auth,email,passwrod);
-    }
+    const handleSignup = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password);
+      };
+      
 
     const handleLogin=(email,passwrod)=>{
         return signInWithEmailAndPassword(auth,email,passwrod);
