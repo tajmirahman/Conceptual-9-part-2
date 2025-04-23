@@ -6,6 +6,7 @@ import AllApointments from "../components/AllApointments/AllApointments";
 import Profile from "../components/Profile/Profile";
 import Details from "../components/Details";
 import SignUp from "../components/SignUp";
+import Login from "../components/Login";
 
 
 
@@ -55,6 +56,10 @@ const router=createBrowserRouter([
             {
                 path:'/signup',
                 element:<SignUp />
+            },
+            {
+                path:'/login',
+                element:<Login />
             }
             
 
