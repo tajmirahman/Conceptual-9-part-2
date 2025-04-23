@@ -12,8 +12,25 @@ const SignUp = () => {
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+        const conPassword = e.target.conPassword.value;
 
-        console.log("Email:", email); // ✅ check this prints a valid email
+        if(password !=conPassword){
+            alert('password does not match!')
+            return;
+        }
+
+        if(name.length <5){
+            alert('please write atleast 5 character')
+            return;
+        }
+
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).+$/;
+
+        if(!passwordRegex.test(password)){
+            alert('plese write password!')
+            return;
+        }
+
 
         handleSignup(email, password)
             .then(result => {
@@ -39,7 +56,10 @@ const SignUp = () => {
                     <input type="email" name="email" className='w-[70%]  text-center' placeholder="Your Email" required />
                 </div>
                 <div>
-                    <input type="password" name="password" className='w-[70%] text-center' placeholder="Your Password" required />
+                    <input type="text" name="password" className='w-[70%] text-center' placeholder="Your Password" required />
+                </div>
+                <div>
+                    <input type="text" name="conPassword" className='w-[70%] text-center' placeholder="Your Password" required />
                 </div>
                 <button type="submit" className='btn'>Sign Up</button>
                 <p className='text-white'>If you have already an account? please <NavLink to={'/login'}><span className='text-yellow-500 underline'>login</span></NavLink></p>
