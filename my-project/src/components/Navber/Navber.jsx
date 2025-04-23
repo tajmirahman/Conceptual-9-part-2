@@ -1,9 +1,14 @@
 import { NavLink } from "react-router-dom";
 
 import './Navber.css';
+import { useContext } from "react";
+import { authContext } from "../AuthProvider/AuthProvider";
 
 
 const Navber = () => {
+
+    const { user, handleLogout } = useContext(authContext);
+
     return (
         <div className="min-h-20 bg-blue-900 flex justify-between items-center text-white">
 
@@ -19,9 +24,16 @@ const Navber = () => {
             </div>
 
             <div className="mr-4">
-                <NavLink to={'/login'}><button className="btn btn-primary">Login</button></NavLink>
+                {
+                    user && user?.email ? <button onClick={handleLogout} className="btn">Logout</button>
+                        :
+                        <NavLink to={'/login'}><button className="btn btn-primary">Login</button></NavLink>
+                }
+
+
+
             </div>
-            
+
         </div>
     );
 };

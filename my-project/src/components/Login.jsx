@@ -4,10 +4,17 @@ import { NavLink } from 'react-router-dom';
 
 const Login = () => {
 
-    const handleLogin=useContext(authContext);
-    console.log(handleLogin)
+    const {handleLogin}=useContext(authContext);
 
-    const handleForm=()=>{
+
+    const handleForm=(e)=>{
+        e.preventDefault();
+        const email=e.target.email.value;
+        const password=e.target.password.value;
+
+        handleLogin(email,password)
+        .then(res=>{console.log(res.user)})
+        .catch(err=>{console.log(err.message)})
         
     }
 
