@@ -5,7 +5,11 @@ import { authContext } from './AuthProvider/AuthProvider';
 
 const PrivateRoute = ({ children }) => {
 
-    const  {user}= useContext(authContext);
+    const  {user,loading}= useContext(authContext);
+
+    if(loading){
+        return <h1>Loading...</h1>
+    }
 
 
     if(!user){

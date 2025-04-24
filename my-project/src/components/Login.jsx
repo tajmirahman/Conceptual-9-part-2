@@ -14,6 +14,9 @@ const Login = () => {
 
 
     const handleForm=(e)=>{
+
+        setError('');
+        
         e.preventDefault();
         const email=e.target.email.value;
         const password=e.target.password.value;
