@@ -1,5 +1,5 @@
 import React, {  createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword,  GoogleAuthProvider,  onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import auth from '../../utilities/firebase.init';
 
 
@@ -10,7 +10,7 @@ const AuthProvider = ({ children }) => {
 
     const [user,setUser]=useState(null);
 
-    const provider = new GoogleAuthProvider();
+    const googleProvider = new GoogleAuthProvider();
 
     const handleSignup = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
@@ -31,8 +31,8 @@ const AuthProvider = ({ children }) => {
         })
     }
 
-    const hadleGoogle=()=>{
-        signInWithPopup(auth, provider)
+    const handleGoogle=()=>{
+        return signInWithPopup(auth, googleProvider)
     }
 
     useEffect(()=>{
@@ -43,12 +43,14 @@ const AuthProvider = ({ children }) => {
     useEffect(()=>{
         const unsubscribe=onAuthStateChanged(auth,(currentUser)=>{
           
-            if(currentUser){
-                setUser(currentUser);
-            }
-            else{
-                setUser(null);
-            }
+            setUser(currentUser);
+
+            // if(currentUser){
+            //     setUser(currentUser);
+            // }
+            // else{
+            //     setUser(null);
+            // }
             
         })
         return ()=>{
@@ -63,7 +65,7 @@ const AuthProvider = ({ children }) => {
         handleSignup,
         handleLogin,
         handleLogout,
-        hadleGoogle,
+        handleGoogle,
         user,
         setUser,
         handleUserProfile

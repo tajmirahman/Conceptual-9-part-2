@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const SignUp = () => {
 
-    const { handleSignup,handleUserProfile } = useContext(authContext);
+    const { handleSignup, handleUserProfile, handleGoogle } = useContext(authContext);
     const [error, setError] = useState('');
 
     const handleForm = (e) => {
@@ -38,10 +38,10 @@ const SignUp = () => {
 
 
         handleSignup(email, password)
-        .then(()=>{
-            handleUserProfile(name,image)
-        })
-    
+            .then(() => {
+                handleUserProfile(name, image)
+            })
+
     };
 
 
@@ -71,18 +71,23 @@ const SignUp = () => {
                 {
                     error && <p className="bg-white text-red-700 w-[50%] mx-auto rounded-lg p-2 " >{error}</p>
                 }
-               
+
 
                 <button type="submit" className='btn'>Sign Up</button>
                 <p className='text-white'>If you have already an account? please <NavLink to={'/login'}><span className='text-yellow-500 underline'>login</span></NavLink></p>
-                <hr />
-                <h1 className='text-white'>Or Sign up with</h1>
+
+            </form>
+
+            <hr />
+            <div className='text-center space-y-2'>
+            <h1 className='text-white'>Or Sign up with</h1>
                 <div>
-                    <button className='btn'>with google</button>
-                </div><div>
+                    <button onClick={handleGoogle} className='btn'>with google</button>
+                </div>
+                <div>
                     <button className='btn'>with github</button>
                 </div>
-            </form>
+            </div>
 
         </div>
     );
