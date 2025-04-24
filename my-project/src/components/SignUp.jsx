@@ -4,20 +4,21 @@ import { NavLink } from 'react-router-dom';
 
 const SignUp = () => {
 
-    const { handleSignup } = useContext(authContext);
+    const { handleSignup,handleUserProfile } = useContext(authContext);
     const [error, setError] = useState('');
 
     const handleForm = (e) => {
         e.preventDefault();
 
         const name = e.target.name.value;
+        const image = e.target.photoUrl.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const conPassword = e.target.conPassword.value;
 
         if (password != conPassword) {
             // setError({ ...error, name: 'password does not match!' })// (when we do set useState object that time use this type of vlaidation)
-            
+
             setError('password does not match!') //(when useState use string that time use this type of validation)
             return;
         }
@@ -37,6 +38,9 @@ const SignUp = () => {
 
 
         handleSignup(email, password)
+        .then(()=>{
+            handleUserProfile(name,image)
+        })
     
     };
 
@@ -46,11 +50,14 @@ const SignUp = () => {
     return (
         <div className='bg-sky-600 w-[600px]  mx-auto mt-5 p-3'>
 
-            <h1 className='text-center text-2xl text-white mt-6'>Signup Your Account</h1>
+            <h1 className='text-center text-2xl text-white mt-2'>Signup Your Account</h1>
 
-            <form onSubmit={handleForm} className='space-y-4 text-center p-2'>
-                <div className='mt-4 '>
+            <form onSubmit={handleForm} className='space-y-2 text-center p-2'>
+                <div className='mt-2 '>
                     <input type="text" name="name" className='w-[70%] text-center' placeholder="Your Name" />
+                </div>
+                <div className='mt-2 '>
+                    <input type="text" name="photoUrl" className='w-[70%] text-center' placeholder="Photo Url" />
                 </div>
                 <div>
                     <input type="email" name="email" className='w-[70%]  text-center' placeholder="Your Email" required />
