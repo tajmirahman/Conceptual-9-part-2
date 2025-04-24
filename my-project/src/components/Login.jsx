@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { authContext } from './AuthProvider/AuthProvider';
-import { NavLink } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
 
 const Login = () => {
 
@@ -13,6 +13,8 @@ const Login = () => {
         const password=e.target.password.value;
 
         handleLogin(email,password)
+
+        
         
         
     }

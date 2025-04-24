@@ -1,6 +1,6 @@
 
 
-import { useLoaderData } from 'react-router-dom';
+import { Navigate, useLoaderData } from 'react-router-dom';
 import Modal from './Modal';
 import { useContext } from 'react';
 import { authContext } from './AuthProvider/AuthProvider';
@@ -9,8 +9,13 @@ import { authContext } from './AuthProvider/AuthProvider';
 
 const Details = () => {
 
-    const data = useContext(authContext);
-    console.log(data);
+    const {user} = useContext(authContext);
+    console.log(user)
+
+    if(!user){
+       return <Navigate to={'/login'}></Navigate>
+
+    }
 
 
 

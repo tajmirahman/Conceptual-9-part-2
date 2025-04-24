@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { authContext } from './AuthProvider/AuthProvider';
-import { NavLink } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
 
 const SignUp = () => {
 
@@ -36,6 +36,7 @@ const SignUp = () => {
             return;
         }
 
+        
 
         handleSignup(email, password)
             .then(() => {
