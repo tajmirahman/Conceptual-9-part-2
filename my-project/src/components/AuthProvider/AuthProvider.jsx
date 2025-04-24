@@ -48,7 +48,8 @@ const AuthProvider = ({ children }) => {
         handleLogin,
         handleLogout,
         hadleGoogle,
-        user
+        user,
+        setUser
     }
 
     return (

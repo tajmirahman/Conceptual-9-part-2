@@ -13,8 +13,7 @@ const Login = () => {
         const password=e.target.password.value;
 
         handleLogin(email,password)
-        .then(res=>{console.log(res.user)})
-        .catch(err=>{console.log(err.message)})
+        
         
     }
 
