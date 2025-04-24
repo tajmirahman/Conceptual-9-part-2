@@ -1,10 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { authContext } from './AuthProvider/AuthProvider';
 import { Navigate, NavLink } from 'react-router-dom';
 
 const Login = () => {
 
-    const {handleLogin}=useContext(authContext);
+    const [error,setError]=useState('');
+
+    const {handleLogin,user}=useContext(authContext);
+
+    if(user){
+        return <Navigate to={'/'}></Navigate>
+    }
 
 
     const handleForm=(e)=>{
@@ -13,6 +19,10 @@ const Login = () => {
         const password=e.target.password.value;
 
         handleLogin(email,password)
+        .then(()=>{})
+        .catch(err=>{
+            setError(err.message);
+        })
 
         
         
@@ -34,6 +44,10 @@ const Login = () => {
                 <button type="submit" className='btn'>Login</button>
                 <p className='text-white'>if you have do not create an account? please <NavLink to={'/signup'}><span className='text-yellow-500 underline'>register</span></NavLink></p>
             </form>
+
+            {
+                    error && <p className="bg-white text-red-700 w-[50%] mx-auto rounded-lg p-2 " >{error.split('/')[1].slice(0,18)}</p>
+                }
 
         </div>
     );

@@ -7,61 +7,64 @@ import Profile from "../components/Profile/Profile";
 import Details from "../components/Details";
 import SignUp from "../components/SignUp";
 import Login from "../components/Login";
+import PrivateRoute from "../components/PrivateRoute";
 
 
 
-const router=createBrowserRouter([
+const router = createBrowserRouter([
     {
-        path:'/',
-        element:<MainLayout />,
-        children:[
+        path: '/',
+        element: <MainLayout />,
+        children: [
             {
-                path:'/',
+                path: '/',
                 element: <Home />,
-                loader: async()=>{
-                    const serviceRes= await fetch('/service.json');
-                    const serviceData=await serviceRes.json();
+                loader: async () => {
+                    const serviceRes = await fetch('/service.json');
+                    const serviceData = await serviceRes.json();
 
-                    const feedbackRes= await fetch('/feedBack.json');
-                    const feedbackData= await feedbackRes.json();
+                    const feedbackRes = await fetch('/feedBack.json');
+                    const feedbackData = await feedbackRes.json();
 
-                    return {serviceData,feedbackData}
+                    return { serviceData, feedbackData }
                 }
             },
             {
-                path:'/allTreatmens',
-                element:<AllTreatments />,
-                loader: ()=>fetch('/service.json')
+                path: '/allTreatmens',
+                element: <AllTreatments />,
+                loader: () => fetch('/service.json')
             },
             {
-                path:'/allApointments',
-                element:<AllApointments />
+                path: '/allApointments',
+                element: <AllApointments />
             },
             {
                 path: '/profile',
-                element:<Profile />
+                element: <Profile />
             },
             {
                 path: '/details/:id',
-                element:<Details />,
-                loader: async({params})=>{
-                    const res= await fetch('/service.json');
-                    const data= await res.json();
-                    
-                    const singleData= data.find(d=> d.id == params.id);
-                    
+                element: <PrivateRoute>
+                    <Details />
+                </PrivateRoute>,
+                loader: async ({ params }) => {
+                    const res = await fetch('/service.json');
+                    const data = await res.json();
+
+                    const singleData = data.find(d => d.id == params.id);
+
                     return singleData;
                 }
             },
             {
-                path:'/signup',
-                element:<SignUp />
+                path: '/signup',
+                element: <SignUp />
             },
             {
-                path:'/login',
-                element:<Login />
+                path: '/login',
+                element: <Login />
             }
-            
+
 
         ]
     }

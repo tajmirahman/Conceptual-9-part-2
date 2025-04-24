@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { authContext } from './AuthProvider/AuthProvider';
-import { Navigate, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 
 const SignUp = () => {
 
