@@ -1,3 +1,4 @@
+import { info } from 'autoprefixer';
 import React from 'react';
 
 const Modal = () => {
@@ -10,9 +11,27 @@ const Modal = () => {
 
         const  fName=e.target.fname.value;
         const  lName=e.target.lname.value;
+        const email=e.target.email.value;
+        const phone=e.target.number.value;
+        const date=e.target.date.value;
+        const address=e.target.address.value;
+
+        const info={
+            fName,lName,email,phone,date,address
+        }
+
+        // local storage get item
+
+        let saveData=[];
+        const loadData=localStorage.getItem('appointments');
+        if(loadData){
+            saveData= JSON.parse(loadData);
+        }
+        saveData.push(info);
+        localStorage.setItem('appointments',JSON.stringify(saveData));
     
 
-        console.log(fName,lName)
+
     }
 
     return (
@@ -46,13 +65,13 @@ const Modal = () => {
               
                         <fieldset className="fieldset">
                             Appointment Data
-                            <input type="date" className="input" placeholder="Type here" />
+                            <input type="date" name='date' className="input" placeholder="Type here" />
                         </fieldset>
                  
           
                         <fieldset className="fieldset">
                             Address
-                            <input type="text" className="input" placeholder="Type here" />
+                            <input type="text" name='address' className="input" placeholder="Type here" />
                         </fieldset>
                
 
