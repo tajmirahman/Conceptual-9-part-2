@@ -44,6 +44,7 @@ const Modal = () => {
 
         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
             <div className="modal-box">
+                <h1 className='text-xl font-bold text-center'>Appointment Form</h1>
 
                 <form onSubmit={handleForm}>
                  
