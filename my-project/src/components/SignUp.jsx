@@ -1,13 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { authContext } from './AuthProvider/AuthProvider';
-import {  NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
 
     const { handleSignup, handleUserProfile, handleGoogle } = useContext(authContext);
     const [error, setError] = useState('');
 
+    const location=useLocation();
+    const navigate=useNavigate();
+    const from = location.state?.from?.pathname || '/';
+
     const handleForm = (e) => {
+        setError('');
+
         e.preventDefault();
 
         const name = e.target.name.value;
@@ -36,20 +42,28 @@ const SignUp = () => {
             return;
         }
 
-        
+
 
         handleSignup(email, password)
             .then(() => {
                 handleUserProfile(name, image)
+                navigate('/');
             })
 
     };
+
+    const handleGoogleSubmit= ()=>{
+        handleGoogle()
+        .then(()=>{
+            navigate(from, { replace: true });
+        })
+    }
 
 
 
 
     return (
-        <div className='bg-sky-600 w-[600px]  mx-auto mt-5 p-3'>
+        <div className='bg-sky-600 w-[600px]  mx-auto  mt-5 '>
 
             <h1 className='text-center text-2xl text-white mt-2'>Signup Your Account</h1>
 
@@ -69,9 +83,11 @@ const SignUp = () => {
                 <div>
                     <input type="text" name="conPassword" className='w-[70%] text-center' placeholder="Your Password" required />
                 </div>
-                {
-                    error && <p className="bg-white text-red-700 w-[50%] mx-auto rounded-lg p-2 " >{error}</p>
-                }
+                <div className=" text-red-700 w-[60%] mx-auto  rounded-lg p-2 ">
+                    {
+                        error && <p className="text-center bg-white " >{error}</p>
+                    }
+                </div>
 
 
                 <button type="submit" className='btn'>Sign Up</button>
@@ -80,14 +96,14 @@ const SignUp = () => {
             </form>
 
             <hr />
-            <div className='text-center space-y-2'>
-            <h1 className='text-white'>Or Sign up with</h1>
+            <div className='text-center space-y-2 p-2'>
+                <h1 className='text-white'>Or Sign up with</h1>
                 <div>
-                    <button onClick={handleGoogle} className='btn'>with google</button>
+                    <button onClick={handleGoogleSubmit} className='btn'>with google</button>
                 </div>
-                <div>
-                    <button className='btn'>with github</button>
-                </div>
+                {/* <div>
+                    <button className='btn btn-warning'>with github</button>
+                </div> */}
             </div>
 
         </div>

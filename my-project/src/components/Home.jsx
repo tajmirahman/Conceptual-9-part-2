@@ -3,6 +3,7 @@ import Banner from './Banner';
 import { NavLink, useLoaderData } from 'react-router-dom';
 import Service from './Service';
 import FeedBack from './FeedBack';
+import Footer from './Footer';
 
 const Home = () => {
 
@@ -22,6 +23,7 @@ const Home = () => {
             <NavLink to={'/allTreatmens'}><button className='btn btn-primary mx-auto block my-6'>Show More</button></NavLink>
 
             <FeedBack feedbackData={feedbackData}></FeedBack>
+            <Footer></Footer>
 
         </div>
     );
