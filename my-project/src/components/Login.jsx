@@ -23,7 +23,7 @@ const Login = () => {
         const password=e.target.password.value;
 
         handleLogin(email,password)
-        .then(res=>{
+        .then(()=>{
             navigate(from, { replace: true });
   
         })

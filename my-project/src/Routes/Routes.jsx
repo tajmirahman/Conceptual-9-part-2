@@ -36,11 +36,15 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allApointments',
-                element: <AllApointments />
+                element: <PrivateRoute>
+                    <AllApointments />
+                </PrivateRoute>
             },
             {
                 path: '/profile',
-                element: <Profile />
+                element: <PrivateRoute>
+                    <Profile />
+                </PrivateRoute>
             },
             {
                 path: '/details/:id',
