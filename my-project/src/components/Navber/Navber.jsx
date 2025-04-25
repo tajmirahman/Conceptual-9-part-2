@@ -21,7 +21,10 @@ const Navber = () => {
                 <NavLink to={'/'}>Home</NavLink>
                 <NavLink to={'/allTreatmens'}>All Treatments</NavLink>
                 <NavLink to={'/allApointments'}>All Apoinments</NavLink>
-                <NavLink to={'/profile'}>Profile</NavLink>
+                {
+                    user &&
+                    <NavLink to={'/profile'}>Profile</NavLink>
+                }
             </div>
 
             <div className="mr-4 flex justify-center items-center gap-3">
