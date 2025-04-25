@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { authContext } from '../AuthProvider/AuthProvider';
+import AppointmentCard from './AppointmentCard';
 
 const AllApointments = () => {
     const { user } = useContext(authContext);
@@ -13,22 +14,17 @@ const AllApointments = () => {
         }
 
         const userData = saveData.filter(data => data.email === user?.email);
-        console.log(userData);
+
         setLocalStorage(userData);
 
     }, [user?.email])
 
     return (
-        <div>
-            appontment
+        <div className='space-y-4 mt-6'>
+            
 
             {
-                locatStorage.map(data=> 
-                <div data={data}>
-                    {console.log(data)}
-                    <li>{data.fName}</li>
-                </div>
-                )
+                locatStorage.map((data,index)=> <AppointmentCard key={index} data={data} index={index} />)     
             }
 
         </div>
