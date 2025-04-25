@@ -1,7 +1,12 @@
-import { info } from 'autoprefixer';
-import React from 'react';
+
+import React, { useContext } from 'react';
+import { authContext } from './AuthProvider/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 const Modal = () => {
+
+    const {user}=useContext(authContext);
+    const navigate=useNavigate();
 
     const handleForm=(e)=>{
         e.preventDefault();
@@ -30,7 +35,7 @@ const Modal = () => {
         saveData.push(info);
         localStorage.setItem('appointments',JSON.stringify(saveData));
     
-
+        navigate('/allApointments')
 
     }
 
@@ -54,7 +59,7 @@ const Modal = () => {
                    
                         <fieldset className="fieldset">
                             Email
-                            <input type="text" name='email' className="input" placeholder="Type here" />
+                            <input type="text" name='email' className="input" placeholder="Type here" value={user?.email} />
                         </fieldset>
                    
                         <fieldset className="fieldset">
