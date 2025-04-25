@@ -1,28 +1,32 @@
 import React, { useContext, useState } from 'react';
 import { authContext } from './AuthProvider/AuthProvider';
-import { Navigate, NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
     const [error,setError]=useState('');
+    const location=useLocation();
+    const navigate=useNavigate();
+    const from = location.state?.from?.pathname || '/';
 
-    const {handleLogin,user}=useContext(authContext);
+    const {handleLogin}=useContext(authContext);
 
-    if(user){
-        return <Navigate to={'/'}></Navigate>
-    }
+   
 
 
     const handleForm=(e)=>{
 
         setError('');
-        
+
         e.preventDefault();
         const email=e.target.email.value;
         const password=e.target.password.value;
 
         handleLogin(email,password)
-        .then(()=>{})
+        .then(res=>{
+            navigate(from, { replace: true });
+  
+        })
         .catch(err=>{
             setError(err.message);
         })
