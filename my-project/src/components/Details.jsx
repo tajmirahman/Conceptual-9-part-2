@@ -8,7 +8,7 @@ import Modal from './Modal';
 
 const Details = () => {
 
-  
+
 
 
     const { image, description, treatment } = useLoaderData();
@@ -16,7 +16,7 @@ const Details = () => {
 
     return (
         <div
-            className="hero min-h-screen w-[80%] mx-auto max-w-[1200px] mt-8"
+            className="hero w-[80%] h-[300px] sm:h-[400px] md:h-[400px] lg:h-[400px] mx-auto lg:max-w-[1200px] mt-8"
             style={{
                 backgroundImage:
                     `url(${image})`,
@@ -37,6 +37,8 @@ const Details = () => {
             <Modal treatment={treatment}></Modal>
 
         </div>
+
+
 
 
     );

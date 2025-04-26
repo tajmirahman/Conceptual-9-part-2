@@ -63,7 +63,7 @@ const SignUp = () => {
 
 
     return (
-        <div className='bg-sky-600 w-[600px]  mx-auto  mt-5 '>
+        <div className='bg-sky-600 w-[400px] md:w-[600px]  mx-auto  mt-5 '>
 
             <h1 className='text-center text-2xl text-white mt-2'>Signup Your Account</h1>
 

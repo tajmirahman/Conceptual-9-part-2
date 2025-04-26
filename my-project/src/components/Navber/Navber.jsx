@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import './Navber.css';
 import { useContext } from "react";
 import { authContext } from "../AuthProvider/AuthProvider";
-import userLogo from '../../assets/images.png'
+
 
 
 const Navber = () => {
@@ -14,10 +14,10 @@ const Navber = () => {
         <div className="min-h-20 bg-blue-900 flex justify-between items-center text-white">
 
             <div>
-                <h1 className="text-xl font-extrabold ml-4">TEETH WIZARD</h1>
+                <h1 className="text-xl font-extrabold lg:ml-4 ml-2">TEETH WIZARD</h1>
             </div>
 
-            <div className="space-x-4">
+            <div className="lg:space-x-4 ml-1 space-x-1">
                 <NavLink to={'/'}>Home</NavLink>
                 <NavLink to={'/allTreatmens'}>All Treatments</NavLink>
                 <NavLink to={'/allApointments'}>All Apoinments</NavLink>
@@ -36,8 +36,8 @@ const Navber = () => {
                                 <p>{user?.displayName}</p>
                             </div>
 
-                            :
-                            <img className='w-10 h-10 rounded-full' src={userLogo} alt="" />
+                            :''
+                            
                     }
                 </div>
                 <div>
